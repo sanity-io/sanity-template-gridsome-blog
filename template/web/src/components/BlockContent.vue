@@ -1,20 +1,19 @@
 <template>
-<div>
-<PortableText
-    :class="className"
+  <portable-text
     :blocks="blocks"
     :serializers="serializers"
     :projectId="$static.metaData.sanityOptions.projectId"
     :dataset="$static.metaData.sanityOptions.dataset"
   />
-</div>
 </template>
 
 <script>
 import PortableText from 'sanity-blocks-vue-component'
 
 export default {
-  props: ['blocks', 'className'],
+  props: {
+    blocks: Array
+  },
   components: {
     PortableText
   },
@@ -29,7 +28,7 @@ export default {
         }
       }
     }
-    }
+  }
 }
 </script>
 

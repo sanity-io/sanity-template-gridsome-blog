@@ -8,10 +8,10 @@
     </div>
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
-      <BlockContent :blocks="post._rawExcerpt" />
+      <block-content :blocks="post._rawExcerpt" />
 
-      <PostMeta class="post-card__meta" :post="post" />
-      <PostTags class="post-card__tags" :post="post" />
+      <post-meta class="post-card__meta" :post="post" />
+      <post-tags class="post-card__tags" :post="post" />
 
       <g-link class="post-card__link" :to="post.slug.current">Link</g-link>
 
@@ -30,7 +30,9 @@ export default {
     PostTags,
     BlockContent
   },
-  props: ['post']
+  props: {
+    post: Object
+  }
 }
 </script>
 

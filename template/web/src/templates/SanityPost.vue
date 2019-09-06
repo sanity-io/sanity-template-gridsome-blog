@@ -5,7 +5,7 @@
         {{ $page.post.title }}
       </h1>
 
-      <PostMeta :post="$page.post" v-if="$page.post" />
+      <post-meta :post="$page.post" v-if="$page.post" />
 
     </div>
 
@@ -17,14 +17,14 @@
           :src="$urlForImage($page.post.mainImage, $page.metaData.sanityOptions).width(600).auto('format').url()" />
       </div>
 
-      <BlockContent
+      <block-content
         class="post__content"
         :blocks="$page.post._rawBody"
         v-if="$page.post._rawBody"
       />
 
       <div class="post__footer">
-        <PostTags :post="$page.post" v-if="$page.post" />
+        <post-tags :post="$page.post" v-if="$page.post" />
       </div>
     </div>
 
@@ -32,7 +32,7 @@
       <!-- Add comment widgets here -->
     </div>
 
-    <Author class="post-author" />
+    <author-card class="post-author" />
   </Layout>
 </template>
 
@@ -40,12 +40,11 @@
 import BlockContent from '~/components/BlockContent'
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
-import Author from '~/components/Author.vue'
-import urlForImage from '../utils/urlForImage'
+import AuthorCard from '~/components/AuthorCard'
 
 export default {
   components: {
-    Author,
+    AuthorCard,
     PostMeta,
     PostTags,
     BlockContent
@@ -60,7 +59,7 @@ export default {
         }
       ]
     }
-    }
+  }
 }
 </script>
 
