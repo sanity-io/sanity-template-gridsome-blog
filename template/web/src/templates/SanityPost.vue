@@ -11,7 +11,10 @@
 
     <div class="post content-box">
       <div class="post__header">
-        <img alt="Cover image" v-if="$page.post.mainImage" :src="urlForImage($page.post.mainImage).width(600).auto('format').url()" />
+        <img 
+          alt="Cover image" 
+          v-if="$page.post.mainImage" 
+          :src="$urlForImage($page.post.mainImage, $page.metaData.sanityOptions).width(600).auto('format').url()" />
       </div>
 
       <BlockContent
@@ -34,7 +37,6 @@
 </template>
 
 <script>
-import urlBuilder from '@sanity/image-url'
 import BlockContent from '~/components/BlockContent'
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
@@ -58,13 +60,7 @@ export default {
         }
       ]
     }
-  },
-  methods: {
-    urlForImage: function(source) {
-      const {projectId, dataset} = this.$page.metaData.sanityOptions
-      return urlForImage({source, projectId, dataset})
     }
-  },
 }
 </script>
 

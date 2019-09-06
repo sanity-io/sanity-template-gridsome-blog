@@ -1,7 +1,12 @@
 <template>
 	<div class="author">
-
-		<g-image alt="Author image" class="author__image" :src="urlForImage($static.settings.author.image).width(180).url()" width="180" height="180" blur="5" />
+		<g-image 
+      alt="Author image" 
+      class="author__image" 
+      :src="$urlForImage($static.settings.author.image,     $static.metaData.sanityOptions).width(180).url()" 
+      width="180" 
+      height="180" 
+      blur="5" />
 
 		<h1 v-if="showTitle" class="author__site-title">
 			{{ $static.settings.title }}
@@ -56,15 +61,8 @@ query {
 </static-query>
 
 <script>
-import urlForImage from '../utils/urlForImage'
 export default {
-  props: ['showTitle'],
-  methods: {
-    urlForImage: function(source) {
-      const {projectId, dataset} = this.$static.metaData.sanityOptions
-      return urlForImage({source, projectId, dataset})
-    }
-  },
+  props: ['showTitle']
 }
 </script>
 
