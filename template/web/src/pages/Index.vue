@@ -1,11 +1,15 @@
 <template>
   <Layout :show-logo="false">
     <!-- Author intro -->
-    <Author :show-title="true" />
+    <author-card :show-title="true" />
 
     <!-- List posts -->
     <div class="posts">
-      <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" :metaData="$page.metaData" />
+      <post-card
+        v-for="edge in $page.posts.edges" 
+        :key="edge.node.id" 
+        :post="edge.node" 
+        :metaData="$page.metaData" />
     </div>
 
   </Layout>
@@ -62,12 +66,12 @@
 
 <script>
 
-import Author from '~/components/Author.vue'
-import PostCard from '~/components/PostCard.vue'
+import AuthorCard from '~/components/AuthorCard'
+import PostCard from '~/components/PostCard'
 
 export default {
   components: {
-    Author,
+    AuthorCard,
     PostCard
   },
   metaInfo: {

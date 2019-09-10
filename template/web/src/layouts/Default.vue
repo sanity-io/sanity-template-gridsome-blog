@@ -3,11 +3,11 @@
 
     <header class="header">
       <div class="header__left">
-        <Logo v-if="showLogo" /> 
+        <header-logo v-if="showLogo" /> 
       </div>
       
       <div class="header__right">        
-        <ToggleTheme />
+        <toggle-theme />
       </div>
     </header>
 
@@ -24,15 +24,18 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import ToggleTheme from '~/components/ToggleTheme.vue'
+import HeaderLogo from '~/components/HeaderLogo'
+import ToggleTheme from '~/components/ToggleTheme'
 
 export default {
   props: {
-    showLogo: { default: true }
+    showLogo: {
+      type: Boolean,
+      default: true
+    }
   },
   components: {
-    Logo,
+    HeaderLogo,
     ToggleTheme
   }
 }

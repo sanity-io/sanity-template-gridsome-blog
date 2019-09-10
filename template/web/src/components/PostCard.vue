@@ -1,14 +1,17 @@
 <template>
   <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
-      <g-image alt="Cover image" v-if="post.mainImage" class="post-card__image" :src="urlForImage(post.mainImage).height(440).width(800).auto('format').url()" />
+      <g-image 
+        alt="Cover image" 
+        v-if="post.mainImage" class="post-card__image" 
+        :src="$urlForImage(post.mainImage, $page.metaData.sanityOptions).height(440).width(800).auto('format').url()" />
     </div>
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
-      <BlockContent :blocks="post._rawExcerpt" />
+      <block-content :blocks="post._rawExcerpt" />
 
-      <PostMeta class="post-card__meta" :post="post" />
-      <PostTags class="post-card__tags" :post="post" />
+      <post-meta class="post-card__meta" :post="post" />
+      <post-tags class="post-card__tags" :post="post" />
 
       <g-link class="post-card__link" :to="post.slug.current">Link</g-link>
 
@@ -20,7 +23,6 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import BlockContent from '~/components/BlockContent'
-import urlForImage from '../utils/urlForImage'
 
 export default {
   components: {
@@ -28,13 +30,9 @@ export default {
     PostTags,
     BlockContent
   },
-  props: ['post'],
-  methods: {
-    urlForImage: function(source) {
-      const {projectId, dataset} = this.$page.metaData.sanityOptions
-      return urlForImage({source, projectId, dataset})
-    }
-  },
+  props: {
+    post: Object
+  }
 }
 </script>
 

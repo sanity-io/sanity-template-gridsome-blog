@@ -1,22 +1,19 @@
 <template>
-<div>
-<PortableText
-    :class="className"
+  <portable-text
     :blocks="blocks"
     :serializers="serializers"
     :projectId="$static.metaData.sanityOptions.projectId"
     :dataset="$static.metaData.sanityOptions.dataset"
   />
-</div>
 </template>
 
 <script>
 import PortableText from 'sanity-blocks-vue-component'
-import urlForImage from '../utils/urlForImage'
-
 
 export default {
-  props: ['blocks', 'className'],
+  props: {
+    blocks: Array
+  },
   components: {
     PortableText
   },
@@ -25,19 +22,13 @@ export default {
       serializers: {
         types: {
           mainImage: ({node}) => (<figure>
-          <img src={this.urlForImage(node).auto('format').url()} alt={node.alt} />
+          <img src={this.$urlForImage(node, this.$static.metaData.sanityOptions).auto('format').url()} alt={node.alt} />
             <figcaption>{node.caption}</figcaption>
           </figure>)
         }
       }
     }
-  },
-  methods: {
-    urlForImage: function(source) {
-      const {projectId, dataset} = this.$static.metaData.sanityOptions
-      return urlForImage({source, projectId, dataset})
-    }
-  },
+  }
 }
 </script>
 
