@@ -4,7 +4,7 @@
   "description": "The official Gridsome blog starter with structured content from Sanity.io.",
   "previewMedia": {
     "type": "image",
-    "src": "assets/frontend.jpg",
+    "src": "assets/frontend.png",
     "alt": "A screenshot of the Blog with Gridsome website."
   },
   "technologies": [
@@ -62,7 +62,7 @@
       },
       "previewMedia": {
         "type": "image",
-        "src": "assets/frontend.jpg",
+        "src": "assets/frontend.png",
         "alt": "A preview image of the blog website."
       },
       "requiredCorsOrigins": [
