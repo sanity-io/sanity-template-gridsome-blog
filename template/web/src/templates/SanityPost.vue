@@ -11,10 +11,10 @@
 
     <div class="post content-box">
       <div class="post__header">
-        <img 
-          alt="Cover image" 
-          v-if="$page.post.mainImage" 
-          :src="$urlForImage($page.post.mainImage, $page.metaData.sanityOptions).width(600).auto('format').url()" />
+        <img
+          alt="Cover image"
+          v-if="$page.post.mainImage"
+          :src="$urlForImage($page.post.mainImage, $page.metadata.sanityOptions).width(600).auto('format').url()" />
       </div>
 
       <block-content
@@ -64,8 +64,8 @@ export default {
 </script>
 
 <page-query>
-query Post ($id: String!) {
-  metaData {
+query Post ($id: ID!) {
+  metadata {
     sanityOptions{
       projectId
       dataset

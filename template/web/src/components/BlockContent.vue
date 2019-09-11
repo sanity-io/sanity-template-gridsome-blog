@@ -2,8 +2,8 @@
   <portable-text
     :blocks="blocks"
     :serializers="serializers"
-    :projectId="$static.metaData.sanityOptions.projectId"
-    :dataset="$static.metaData.sanityOptions.dataset"
+    :projectId="$static.metadata.sanityOptions.projectId"
+    :dataset="$static.metadata.sanityOptions.dataset"
   />
 </template>
 
@@ -22,7 +22,7 @@ export default {
       serializers: {
         types: {
           mainImage: ({node}) => (<figure>
-          <img src={this.$urlForImage(node, this.$static.metaData.sanityOptions).auto('format').url()} alt={node.alt} />
+          <img src={this.$urlForImage(node, this.$static.metadata.sanityOptions).auto('format').url()} alt={node.alt} />
             <figcaption>{node.caption}</figcaption>
           </figure>)
         }
@@ -34,7 +34,7 @@ export default {
 
 <static-query>
   {
-    metaData{
+    metadata{
     sanityOptions{
       projectId
       dataset

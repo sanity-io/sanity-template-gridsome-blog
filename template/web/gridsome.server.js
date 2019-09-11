@@ -9,6 +9,6 @@ const clientConfig = require('./client-config')
 module.exports = function (api) {
   api.loadSource(store => {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api
-    store.addMetaData('sanityOptions', clientConfig.sanity)
+    store.addMetadata('sanityOptions', clientConfig.sanity)
   })
 }

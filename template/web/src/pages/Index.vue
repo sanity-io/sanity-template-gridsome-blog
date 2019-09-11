@@ -6,10 +6,10 @@
     <!-- List posts -->
     <div class="posts">
       <post-card
-        v-for="edge in $page.posts.edges" 
-        :key="edge.node.id" 
-        :post="edge.node" 
-        :metaData="$page.metaData" />
+        v-for="edge in $page.posts.edges"
+        :key="edge.node.id"
+        :post="edge.node"
+        :metadata="$page.metadata" />
     </div>
 
   </Layout>
@@ -17,7 +17,7 @@
 
 <page-query>
 {
-  metaData {
+  metadata {
     sanityOptions{
       projectId
       dataset

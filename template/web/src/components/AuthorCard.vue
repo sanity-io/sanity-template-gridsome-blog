@@ -3,7 +3,7 @@
 		<g-image
       alt="Author image"
       class="author__image"
-      :src="$urlForImage($static.settings.author.image,     $static.metaData.sanityOptions).width(180).url()"
+      :src="$urlForImage($static.settings.author.image,     $static.metadata.sanityOptions).width(180).url()"
       width="180"
       height="180"
       blur="5" />
@@ -26,7 +26,7 @@
 
 <static-query>
 query {
-  metaData {
+  metadata {
     sanityOptions{
       projectId
       dataset
