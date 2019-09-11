@@ -14,7 +14,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   siteName: 'Gridsome Blog Starter',
-  siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Sanity for structured content.',
+  siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses structured content from Sanity.io.',
   plugins: [
     {
       use: 'gridsome-source-sanity',
