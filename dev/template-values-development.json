@@ -25,7 +25,7 @@
       }
     },
     "web": {
-      "url": "https://sanity-gatsby-blog-web.netlify.com/",
+      "url": "https://sanity-gridsome-blog-web.netlify.com/",
       "providerName": "netlify",
       "providerInfo": {
         "buildHookId": "5caf2962008b0b042f8df19a",
