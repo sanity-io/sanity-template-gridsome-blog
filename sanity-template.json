@@ -36,7 +36,7 @@
       },
       "previewMedia": {
         "type": "image",
-        "src": "assets/studio.jpg",
+        "src": "assets/studio.png",
         "alt": "A preview image of the Sanity Studio."
       }
     },
