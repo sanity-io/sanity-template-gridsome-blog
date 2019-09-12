@@ -1,10 +1,12 @@
 <template>
   <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
-      <g-image 
-        alt="Cover image" 
-        v-if="post.mainImage" class="post-card__image" 
-        :src="$urlForImage(post.mainImage, $page.metaData.sanityOptions).height(440).width(800).auto('format').url()" />
+      <g-image
+        alt="Cover image"
+        v-if="post.mainImage"
+        class="post-card__image"
+        :src="$urlForImage(post.mainImage, $page.metadata.sanityOptions).height(440).width(800).auto('format').url()"
+      />
     </div>
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
@@ -14,7 +16,6 @@
       <post-tags class="post-card__tags" :post="post" />
 
       <g-link class="post-card__link" :to="post.slug.current">Link</g-link>
-
     </div>
   </div>
 </template>
@@ -64,7 +65,7 @@ export default {
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
+    box-shadow: 1px 10px 30px 0 rgba(0, 0, 0, 0.1);
   }
 
   &__tags {
@@ -78,7 +79,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.0;
+    opacity: 0;
     overflow: hidden;
     text-indent: -9999px;
     z-index: 0;

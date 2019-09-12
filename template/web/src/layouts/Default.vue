@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <header class="header">
       <div class="header__left">
         <header-logo v-if="showLogo" />
@@ -12,14 +11,17 @@
     </header>
 
     <main class="main">
-      <slot/>
+      <slot />
     </main>
 
     <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
-      <span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a> & <a href="//www.sanity.io"> Sanity.io </a></span>
+      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}.</span>
+      <span class="footer__links">
+        Powered by
+        <a href="//gridsome.org">Gridsome</a> &amp;
+        <a href="//www.sanity.io">Sanity.io</a>
+      </span>
     </footer>
-
   </div>
 </template>
 
@@ -48,7 +50,7 @@ export default {
   align-items: center;
   min-height: var(--header-height);
   padding: 0 calc(var(--space) / 2);
-  top:0;
+  top: 0;
   z-index: 10;
 
   &__left,
@@ -75,10 +77,10 @@ export default {
   justify-content: center;
   padding: calc(var(--space) / 2);
   text-align: center;
-  font-size: .8em;
+  font-size: 0.8em;
 
   > span {
-    margin: 0 .35em;
+    margin: 0 0.35em;
   }
 
   a {

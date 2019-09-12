@@ -1,12 +1,9 @@
 <template>
   <Layout>
     <div class="post-title">
-      <h1 class="post-title__text">
-        {{ $page.post.title }}
-      </h1>
+      <h1 class="post-title__text">{{ $page.post.title }}</h1>
 
       <post-meta :post="$page.post" v-if="$page.post" />
-
     </div>
 
     <div class="post content-box">
@@ -14,7 +11,8 @@
         <img
           alt="Cover image"
           v-if="$page.post.mainImage"
-          :src="$urlForImage($page.post.mainImage, $page.metadata.sanityOptions).width(600).auto('format').url()" />
+          :src="$urlForImage($page.post.mainImage, $page.metadata.sanityOptions).width(600).auto('format').url()"
+        />
       </div>
 
       <block-content
@@ -49,7 +47,7 @@ export default {
     PostTags,
     BlockContent
   },
-  metaInfo () {
+  metaInfo() {
     return {
       title: this.$page.post.title,
       meta: [
@@ -66,7 +64,7 @@ export default {
 <page-query>
 query Post ($id: ID!) {
   metadata {
-    sanityOptions{
+    sanityOptions {
       projectId
       dataset
     }
@@ -83,6 +81,7 @@ query Post ($id: ID!) {
     mainImage {
       asset {
         _id
+        url
       }
       caption
       alt
@@ -110,7 +109,6 @@ query Post ($id: ID!) {
 }
 
 .post {
-
   &__header {
     width: calc(100% + var(--space) * 2);
     margin-left: calc(var(--space) * -1);
