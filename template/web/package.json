@@ -10,8 +10,8 @@
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@sanity/image-url": "^0.140.14",
     "dotenv": "^8.1.0",
-    "gridsome": "^0.7",
-    "gridsome-source-sanity": "^1.0.0",
+    "gridsome": "^0.7.1",
+    "gridsome-source-sanity": "^1.0.1",
     "sanity-blocks-vue-component": "^0.1.0"
   },
   "devDependencies": {
