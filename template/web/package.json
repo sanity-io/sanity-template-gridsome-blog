@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
-    "@sanity/image-url": "^0.140.13",
+    "@sanity/image-url": "^0.140.14",
     "dotenv": "^8.1.0",
     "gridsome": "^0.7",
     "gridsome-source-sanity": "^1.0.0",
