@@ -8,7 +8,7 @@ The template contains both a Sanity.io Sanity Studio and a front-end in Gridsome
 
 Want to make a template for Sanity and your favourite front-end framework? We’re still maturing [sanity.io/create](https://sanity.io/create) and our APIs, but do tell us about it on [slack.sanity.io](https://slack.sanity.io).
 
-![The Sanity and Gridsome powered blog](https://github.com/sanity-io/sanity-template-gridsome-blog/blob/master/assets/frontend.jpg?raw=true)
+![The Sanity and Gridsome powered blog](https://github.com/sanity-io/sanity-template-gridsome-blog/blob/master/assets/frontend.png?raw=true)
 
 ## Local development
 
