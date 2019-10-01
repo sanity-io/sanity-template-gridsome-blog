@@ -1,5 +1,5 @@
 {
-  "name": "<#< repository.name >#>-web",
+  "name": "sanity-gridsome-web",
   "private": true,
   "scripts": {
     "build": "gridsome build",
