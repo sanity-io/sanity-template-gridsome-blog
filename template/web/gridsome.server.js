@@ -11,12 +11,4 @@ module.exports = function(api) {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api
     store.addMetadata('sanityOptions', clientConfig.sanity)
   })
-
-  api.createSchema(({ addSchemaTypes }) => {
-    addSchemaTypes(`
-      type SanityDocument implements Node @infer {
-        id: ID!
-      }
-    `)
-  })
 }

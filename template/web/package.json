@@ -11,7 +11,7 @@
     "@sanity/image-url": "^1.0.1",
     "dotenv": "^10.0.0",
     "gridsome": "^0.7.23",
-    "gridsome-source-sanity": "^1.0.5",
+    "gridsome-source-sanity": "^1.1.0",
     "sanity-blocks-vue-component": "^0.1.0",
     "sharp": "^0.29.1"
   },
