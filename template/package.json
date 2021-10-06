@@ -1,6 +1,11 @@
 {
   "private": true,
   "name": "sanity-gridsome",
+  "version": "1.0.5",
+  "engines": {
+    "npm": "^6.10.0"
+  },
+  "engineStrict": true,
   "scripts": {
     "build": "lerna run build --parallel",
     "dev": "lerna run dev --parallel",
