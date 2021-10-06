@@ -3,7 +3,8 @@
   "name": "sanity-gridsome",
   "version": "1.0.5",
   "engines": {
-    "npm": "^6.10.0"
+    "npm": "^6.10.0",
+    "node":"^14.1.0"
   },
   "engineStrict": true,
   "scripts": {
