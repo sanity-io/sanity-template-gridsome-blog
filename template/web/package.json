@@ -8,14 +8,15 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.2",
-    "@sanity/image-url": "^0.140.19",
-    "dotenv": "^8.2.0",
+    "@sanity/image-url": "^1.0.1",
+    "dotenv": "^10.0.0",
     "gridsome": "^0.7.23",
     "gridsome-source-sanity": "^1.0.5",
-    "sanity-blocks-vue-component": "^0.1.0"
+    "sanity-blocks-vue-component": "^0.1.0",
+    "sharp": "^0.29.1"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2"
+    "sass": "^1.42.1",
+    "sass-loader": "^10.1.1"
   }
 }
